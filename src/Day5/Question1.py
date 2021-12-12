@@ -8,6 +8,7 @@ class LineSegment:
         self.x2 = x2
         self.y1 = y1
         self.y2 = y2
+        self.m, self.b = ymxb(self)
 
     def __str__(self):
         return f"({self.x1},{self.y1}) -> ({self.x2},{self.y2})"
@@ -129,7 +130,7 @@ def get_intersect(line1: LineSegment, line2: LineSegment):
     return False, False
 
 
-def answer(input_file_name):
+def answer_math(input_file_name):
     with open(input_file_name, "r") as f:
         lines = f.readlines()
     line_segments = []
@@ -151,9 +152,29 @@ def answer(input_file_name):
             elif (x, y) not in intersections:
                 intersections.append((x, y))
     for i in intersections:
-       print(i)
+        print(i)
     # print(intersections)
-    print(len(intersections) - 1) # -1 for false, false
+    print(len(intersections) - 1)  # -1 for false, false
+
+
+def answer(input_file_name):
+    with open(input_file_name, "r") as f:
+        lines = f.readlines()
+    line_segments = []
+    for line in lines:
+        ln=LineSegment(
+            x1=int(line.split(",")[0]),
+            y1=int(line.split(",")[1].split(" ")[0]),
+            x2=int(line.split(" ")[-1].split(",")[0]),
+            y2=int(line.split(" ")[-1].split(",")[1])
+        )
+        if ln.m ==0:
+            line_segments.append(ln)
+    intersections = []
+    for i in range(0, len(line_segments)):
+        for j in range(i + 1, len(line_segments)):
+            for k in range(line_segments[i].)
+                x, y = get_intersect(line_segments[i], line_segments[j])
 
 
 answer("input.txt")
