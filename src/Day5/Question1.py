@@ -173,8 +173,9 @@ def answer(input_file_name):
     intersections = []
     for i in range(0, len(line_segments)):
         for j in range(i + 1, len(line_segments)):
-            for k in range(line_segments[i].)
-                x, y = get_intersect(line_segments[i], line_segments[j])
+            for x in range(line_segments[i].x1, line_segments[i].x2+1):
+                y = line_segments[i].y1
+                if x in range()
 
 
 answer("input.txt")
