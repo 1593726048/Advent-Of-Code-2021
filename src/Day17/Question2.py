@@ -33,7 +33,7 @@ def answer():
     y_t1 = -162
     y_t2 = - 134
     n = 0
-    for x_vel in range(0, 90):
+    for x_vel in range(0, 76):
         for y_vel in range(165, -163, -1):
             new_projectile = Projectile(0, 0, x_vel, y_vel)
             while new_projectile.check(x_t1, x_t2, y_t1, y_t2) == 0:
