@@ -19,11 +19,9 @@ def compare_elves(elves):
 def main():
     total=0
     with open("input", "r") as f:
-        pairs = []
         for line in f.readlines():
             elves = get_values(line)
             if compare_elves(elves):
-                print(elves)
                 total += 1
     print(total)
 
