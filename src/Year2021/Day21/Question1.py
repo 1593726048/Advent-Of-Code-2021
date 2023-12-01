@@ -65,4 +65,4 @@ def answer(input_file_name):
         return p2.points * dice_rolled
 
 
-print(answer("input.txt"))
+print(answer("input"))

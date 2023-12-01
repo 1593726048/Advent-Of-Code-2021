@@ -75,4 +75,4 @@ def answer(input_file_name):
     print(game.p2_wins)
 
 
-print(answer("input.txt"))
+print(answer("input"))

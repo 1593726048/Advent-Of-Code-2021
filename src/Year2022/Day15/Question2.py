@@ -37,7 +37,7 @@ def sort_out(invalid_xs: List[List[int]]):
             x_s1, x_f1 = new_xs[i]
             con1 = x_s1 <= x_f0 <= x_f1 or x_s0 <= x_f1 <= x_f0
             con2 = x_s1 <= x_s0 <= x_f1 or x_s0 <= x_s1 <= x_f0
-            con3= x_s1==x_f0+1 or x_s0==x_f1+1
+            con3 = x_s1 == x_f0 + 1 or x_s0 == x_f1 + 1
             if con1 or con2 or con3:
                 new_xs[i][0] = min(x_s0, x_s1)
                 new_xs[i][1] = max(x_f0, x_f1)
@@ -67,12 +67,11 @@ def main():
             sensor, beacon = get_sens_beacon(line)
             sensors.append(sensor)
             beacons.append(beacon)
-    for y in range(0,4_000_000):
+    for y in range(0, 4_000_000):
         xs = check_line(beacons, sensors, y)
-        if len(xs)!=1:
+        if len(xs) != 1:
             print(y, xs)
 
 
 if __name__ == "__main__":
     main()
-

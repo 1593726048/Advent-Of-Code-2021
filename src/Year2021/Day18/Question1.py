@@ -136,5 +136,5 @@ def answer(input_file_name):
 
 # print(answer("example.txt"))
 print(answer("Example2"))
-# print(answer("input.txt"))
+# print(answer("input"))
 # 4027
