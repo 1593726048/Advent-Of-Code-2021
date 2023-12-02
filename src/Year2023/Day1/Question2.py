@@ -1,11 +1,3 @@
-def func1(line):
-    pass
-
-
-def func2():
-    pass
-
-
 def main():
     total = 0
     numbers = {
