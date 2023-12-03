@@ -1,10 +1,3 @@
-def func1(line):
-    pass
-
-def func2():
-    pass
-
-
 def main():
     max_color={
         "red": 12,
