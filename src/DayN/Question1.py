@@ -7,7 +7,7 @@ def func2():
 
 def main():
 
-    with open("input", "r") as f:
+    with open("test", "r") as f:
 
         for line in f.readlines():
             pass
