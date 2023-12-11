@@ -4,7 +4,6 @@ class Pipe:
         self.neighbors = []
         self.x = x
         self.y = y
-        self.changed = False
 
     def __repr__(self):
         return self.symbol
@@ -83,7 +82,6 @@ def main():
     for pipe in pipes:
         if pipe not in already_searched:
             pipe.symbol = "."
-            # pipe.changed = True
 
     for x, grid_line in enumerate(grid):
         for y, pipe in enumerate(grid_line):
@@ -166,9 +164,8 @@ def main():
     for grid_line in grid:
         for val in grid_line:
             if val.symbol == "." and val not in already_searched:
-                if not val.changed:
-                    num += 1
-                    val.symbol = "I"
+                num += 1
+                val.symbol = "I"
     for grid_line in new_grid:
         for val in grid_line:
             if isinstance(val, Pipe) and val.symbol == "I":
